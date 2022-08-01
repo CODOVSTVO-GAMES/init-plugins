@@ -4,9 +4,9 @@ using Firebase.Analytics;
 
 public static class SendEvents
 {
-    public static void SendEvent(string type)
+    public static void SendEvent(string message)
     {
-        //type - your message for the event
-        Firebase.Analytics.FirebaseAnalytics.LogEvent(type);
+        //message - your message for the event
+        Firebase.Analytics.FirebaseAnalytics.LogEvent(message);
     }
 }

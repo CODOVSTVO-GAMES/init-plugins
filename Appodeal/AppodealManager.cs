@@ -29,6 +29,7 @@ public class AppodealManager : MonoBehaviour, IInterstitialAdListener
     {
         if (Appodeal.isLoaded(Appodeal.INTERSTITIAL))
         {
+            //Calling an ad display
             Appodeal.show(Appodeal.INTERSTITIAL);
         }
     }
@@ -37,6 +38,7 @@ public class AppodealManager : MonoBehaviour, IInterstitialAdListener
     {
         if (Appodeal.isLoaded(Appodeal.REWARDED_VIDEO))
         {
+            //Calling an ad display
             Appodeal.show(Appodeal.REWARDED_VIDEO);
         }
     }
@@ -46,16 +48,32 @@ public class AppodealManager : MonoBehaviour, IInterstitialAdListener
         switch (type)
         {
             case "bottom":
-                Appodeal.show(Appodeal.BANNER_BOTTOM);
+                if (Appodeal.isLoaded(Appodeal.BANNER_BOTTOM))
+                {
+                    //Calling an ad display
+                    Appodeal.show(Appodeal.BANNER_BOTTOM);
+                }
                 break;
             case "top":
-                Appodeal.show(Appodeal.BANNER_TOP);
+                if (Appodeal.isLoaded(Appodeal.BANNER_TOP))
+                {
+                    //Calling an ad display
+                    Appodeal.show(Appodeal.BANNER_TOP);
+                }
                 break;
             case "left":
-                Appodeal.show(Appodeal.BANNER_LEFT);
+                if (Appodeal.isLoaded(Appodeal.BANNER_LEFT))
+                {
+                    //Calling an ad display
+                    Appodeal.show(Appodeal.BANNER_LEFT);
+                }
                 break;
             case "right":
-                Appodeal.show(Appodeal.BANNER_RIGHT);
+                if (Appodeal.isLoaded(Appodeal.BANNER_RIGHT))
+                {
+                    //Calling an ad display
+                    Appodeal.show(Appodeal.BANNER_RIGHT);
+                }
                 break;
         }
     }
